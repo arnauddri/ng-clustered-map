@@ -7,15 +7,15 @@ if (typeof module !== "undefined" && typeof exports !== "undefined" && module.ex
 'use strict';
 
 angular.module('clustered.map', [])
-  .factory('google', function($window) {
-    if ($window.google === undefined || $window.Clusterer) {
+  .factory('google', ['$window', function($window) {
+    if ($window.google === undefined || $window.MarkerClusterer === undefined) {
       throw new Error('google is not bound to window');
     }
     return {
       maps: $window.google.maps,
       MarkerClusterer: $window.MarkerClusterer
     };
-  })
+  }])
   .directive('clusteredMap', ['google',
     function(google) {
       return {
