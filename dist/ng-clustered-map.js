@@ -1,12 +1,12 @@
 if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports){
-  module.exports = 'pretty.json';
+  module.exports = 'clustered.map';
 }
 
 (function (window, angular, undefined) {
 /* global angular, _ */
 'use strict';
 
-angular.module('angular.maps', [])
+angular.module('clustered.map', [])
   .factory('google', function($window) {
     if ($window.google === undefined || $window.Clusterer) {
       throw new Error('google is not bound to window');

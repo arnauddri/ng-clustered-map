@@ -1,7 +1,7 @@
 /* global angular, _ */
 'use strict';
 
-angular.module('angular.maps', [])
+angular.module('clustered.map', [])
   .factory('google', function($window) {
     if ($window.google === undefined || $window.Clusterer) {
       throw new Error('google is not bound to window');
