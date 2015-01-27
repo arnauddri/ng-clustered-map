@@ -31,15 +31,19 @@ angular.module('clustered.map', [])
           function initialize(markers) {
             var barycenter = scope.center || { x: 0, y:0 }
 
-            for (var i = 0;  i < markers.length; i ++) {
-              barycenter.x += markers[i][0] * markers[i][2]
-              barycenter.y += markers[i][1] * markers[i][2]
+            var sum = 0;
+            if (!scope.center) {
+              for (var i = 0;  i < markers.length; i ++) {
+                barycenter.x += markers[i][0] * markers[i][2]
+                barycenter.y += markers[i][1] * markers[i][2]
+                sum += markers[i][2]
+              }
+
+              barycenter.x /= sum
+              barycenter.y /= sum
             }
 
-            barycenter.x /= markers.length
-            barycenter.y /= markers.length
-
-            var center = new google.maps.LatLng(2,2);
+            var center = new google.maps.LatLng(Math.floor(barycenter.x), Math.floor(barycenter.y));
             var el = angular.element(element[0])[0]
             var map = new google.maps.Map(el, {
               zoom: scope.zoom || 2,
