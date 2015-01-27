@@ -1,0 +1,140 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/arnauddrizard/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz
+12 verbose folder .
+13 info prepublish ngClusteredMap@0.0.5
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/arnauddrizard/.npm/1f1177db-tar.lock
+16 silly lockFile 101dd613-52787-0-7649786164984107-tmp-tgz tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz
+17 verbose lock tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz /Users/arnauddrizard/.npm/101dd613-52787-0-7649786164984107-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 101dd613-52787-0-7649786164984107-tmp-tgz tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz
+21 silly lockFile 101dd613-52787-0-7649786164984107-tmp-tgz tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz
+22 verbose tar unpack /var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz
+23 silly lockFile 4f7a992a-52787-0-7649786164984107-package tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package
+24 verbose lock tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package /Users/arnauddrizard/.npm/4f7a992a-52787-0-7649786164984107-package.lock
+25 silly lockFile 101dd613-52787-0-7649786164984107-tmp-tgz tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz
+26 verbose lock tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz /Users/arnauddrizard/.npm/101dd613-52787-0-7649786164984107-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry dist/ng-clustered-map.js
+31 silly gunzTarPerm extractEntry dist/ng-clustered-map.min.js
+32 silly gunzTarPerm extractEntry example/index.html
+33 silly gunzTarPerm extractEntry example/index.jade
+34 silly gunzTarPerm extractEntry example/style.css
+35 silly gunzTarPerm extractEntry example/style.styl
+36 silly gunzTarPerm extractEntry src/directive.js
+37 silly gunzTarPerm extractEntry src/directive.prefix
+38 silly gunzTarPerm extractEntry src/directive.suffix
+39 silly lockFile 4f7a992a-52787-0-7649786164984107-package tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package
+40 silly lockFile 4f7a992a-52787-0-7649786164984107-package tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package
+41 silly lockFile 101dd613-52787-0-7649786164984107-tmp-tgz tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz
+42 silly lockFile 101dd613-52787-0-7649786164984107-tmp-tgz tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/tmp.tgz
+43 verbose tar pack [ '/Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz',
+43 verbose tar pack   '/var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package' ]
+44 verbose tarball /Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz
+45 verbose folder /var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package
+46 silly lockFile 4f7a992a-52787-0-7649786164984107-package tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package
+47 verbose lock tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package /Users/arnauddrizard/.npm/4f7a992a-52787-0-7649786164984107-package.lock
+48 silly lockFile 7f92b301-ngClusteredMap-0-0-5-package-tgz tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz
+49 verbose lock tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz /Users/arnauddrizard/.npm/7f92b301-ngClusteredMap-0-0-5-package-tgz.lock
+50 silly lockFile 4f7a992a-52787-0-7649786164984107-package tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package
+51 silly lockFile 4f7a992a-52787-0-7649786164984107-package tar:///var/folders/1m/rz7r3lv153j1py6ktq4jh9h80000gn/T/npm-67758-6fiOTFGW/1422370652787-0.7649786164984107/package
+52 silly lockFile 7f92b301-ngClusteredMap-0-0-5-package-tgz tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz
+53 silly lockFile 7f92b301-ngClusteredMap-0-0-5-package-tgz tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz
+54 silly lockFile b01ef163-npm-ngClusteredMap-0-0-5-package /Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package
+55 verbose lock /Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package /Users/arnauddrizard/.npm/b01ef163-npm-ngClusteredMap-0-0-5-package.lock
+56 silly lockFile b01ef163-npm-ngClusteredMap-0-0-5-package /Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package
+57 silly lockFile b01ef163-npm-ngClusteredMap-0-0-5-package /Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package
+58 verbose tar unpack /Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz
+59 silly lockFile 8f9712d2-npm-ngClusteredMap-0-0-5-package tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package
+60 verbose lock tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package /Users/arnauddrizard/.npm/8f9712d2-npm-ngClusteredMap-0-0-5-package.lock
+61 silly lockFile 7f92b301-ngClusteredMap-0-0-5-package-tgz tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz
+62 verbose lock tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz /Users/arnauddrizard/.npm/7f92b301-ngClusteredMap-0-0-5-package-tgz.lock
+63 silly gunzTarPerm modes [ '755', '644' ]
+64 silly gunzTarPerm extractEntry package.json
+65 silly gunzTarPerm extractEntry .npmignore
+66 silly gunzTarPerm extractEntry dist/ng-clustered-map.js
+67 silly gunzTarPerm extractEntry dist/ng-clustered-map.min.js
+68 silly gunzTarPerm extractEntry example/index.html
+69 silly gunzTarPerm extractEntry example/index.jade
+70 silly gunzTarPerm extractEntry example/style.css
+71 silly gunzTarPerm extractEntry example/style.styl
+72 silly gunzTarPerm extractEntry src/directive.js
+73 silly gunzTarPerm extractEntry src/directive.prefix
+74 silly gunzTarPerm extractEntry src/directive.suffix
+75 silly lockFile 8f9712d2-npm-ngClusteredMap-0-0-5-package tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package
+76 silly lockFile 8f9712d2-npm-ngClusteredMap-0-0-5-package tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package
+77 silly lockFile 7f92b301-ngClusteredMap-0-0-5-package-tgz tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz
+78 silly lockFile 7f92b301-ngClusteredMap-0-0-5-package-tgz tar:///Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz
+79 verbose chmod /Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz 644
+80 verbose chown /Users/arnauddrizard/.npm/ngClusteredMap/0.0.5/package.tgz [ 501, 20 ]
+81 silly lockFile 3a52ce78- .
+82 silly lockFile 3a52ce78- .
+83 silly publish { name: 'ngClusteredMap',
+83 silly publish   version: '0.0.5',
+83 silly publish   description: 'An angular directive to display clustered maps',
+83 silly publish   main: 'dist/ng-clustered-map.min.js',
+83 silly publish   scripts:
+83 silly publish    { minify: 'uglifyjs --lint false -mc -o dist/ng-clustered-map.min.js dist/ng-clustered-map.js',
+83 silly publish      cat: 'cat src/directive.prefix src/directive.js src/directive.suffix > dist/ng-clustered-map.js',
+83 silly publish      build: 'npm run cat && npm run minify',
+83 silly publish      watch: 'stylus example/style.styl -o example/ -w & jade example/index.jade -o example/ -w',
+83 silly publish      wat: 'jade src -P  -w',
+83 silly publish      test: 'echo "Error: no test specified" && exit 0' },
+83 silly publish   author: { name: '=', email: '=' },
+83 silly publish   license: 'MIT',
+83 silly publish   devDependencies: { jade: '^1.2.0', stylus: '^0.49.3' },
+83 silly publish   readme: 'ERROR: No README data found!',
+83 silly publish   _id: 'ngClusteredMap@0.0.5',
+83 silly publish   dist: { shasum: 'c5bb7bd6121821cc51d6fabc6502a422542640d7' },
+83 silly publish   _from: '.' }
+84 verbose url raw ngClusteredMap
+85 verbose url resolving [ 'https://registry.npmjs.org/', './ngClusteredMap' ]
+86 verbose url resolved https://registry.npmjs.org/ngClusteredMap
+87 info trying registry request attempt 1 at 15:57:32
+88 http PUT https://registry.npmjs.org/ngClusteredMap
+89 http 403 https://registry.npmjs.org/ngClusteredMap
+90 error publish Failed PUT 403
+91 error Error: forbidden New packages must have all-lowercase names: ngClusteredMap
+91 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:14)
+91 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+91 error     at Request.EventEmitter.emit (events.js:98:17)
+91 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+91 error     at Request.EventEmitter.emit (events.js:117:20)
+91 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+91 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+91 error     at _stream_readable.js:920:16
+91 error     at process._tickCallback (node.js:415:13)
+92 error If you need help, you may report this *entire* log,
+92 error including the npm and node versions, at:
+92 error     <http://github.com/npm/npm/issues>
+93 error System Darwin 14.0.0
+94 error command "node" "/usr/local/bin/npm" "publish"
+95 error cwd /Users/arnauddrizard/Dropbox/Dev/Angular/ng-clustered-map
+96 error node -v v0.10.26
+97 error npm -v 1.4.3
+98 verbose exit [ 1, true ]
