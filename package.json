@@ -1,0 +1,20 @@
+{
+  "name": "ngClusteredMap",
+  "version": "0.0.5",
+  "description": "An angular directive to display clustered maps",
+  "main": "dist/ng-clustered-map.min.js",
+  "scripts": {
+    "minify": "uglifyjs --lint false -mc -o dist/ng-clustered-map.min.js dist/ng-clustered-map.js",
+    "cat": "cat src/directive.prefix src/directive.js src/directive.suffix > dist/ng-clustered-map.js",
+    "build": "npm run cat && npm run minify",
+    "watch": "stylus example/style.styl -o example/ -w & jade example/index.jade -o out/ -w",
+    "wat": "jade src -P  -w",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "= <=>",
+  "license": "MIT",
+  "devDependencies": {
+    "jade": "^1.2.0",
+    "stylus": "^0.49.3"
+  }
+}
