@@ -7,7 +7,7 @@ if (typeof module !== "undefined" && typeof exports !== "undefined" && module.ex
 'use strict';
 
 angular.module('clustered.map', [])
-  .factory('Google', ['$window', function($window) {
+  .factory('google', ['$window', function($window) {
     if ($window.google === undefined || $window.MarkerClusterer === undefined) {
       throw new Error('google is not bound to window');
     }
@@ -16,21 +16,33 @@ angular.module('clustered.map', [])
       MarkerClusterer: $window.MarkerClusterer
     };
   }])
-  .directive('clusteredMap', ['Google',
+  .directive('clusteredMap', ['google',
     function(google) {
       return {
         restrict: 'EA',
         replace: true,
         template: '<div id="map_canvas"></div>',
         scope: {
-          markers: '='
+          markers: '=',
+          zoom: '=',
+          center: '='
         },
         link: function(scope, element) {
           function initialize(markers) {
+            var barycenter = scope.center || { x: 0, y:0 }
+
+            for (var i = 0;  i < markers.length; i ++) {
+              barycenter.x += markers[i][0] * markers[i][2]
+              barycenter.y += markers[i][1] * markers[i][2]
+            }
+
+            barycenter.x /= markers.length
+            barycenter.y /= markers.length
+
             var center = new google.maps.LatLng(2,2);
             var el = angular.element(element[0])[0]
             var map = new google.maps.Map(el, {
-              zoom: 7,
+              zoom: scope.zoom || 2,
               center: center,
               mapTypeId: google.maps.MapTypeId.ROADMAP
             });
