@@ -7,7 +7,7 @@
     "minify": "uglifyjs --lint false -mc -o dist/ng-clustered-map.min.js dist/ng-clustered-map.js",
     "cat": "cat src/directive.prefix src/directive.js src/directive.suffix > dist/ng-clustered-map.js",
     "build": "npm run cat && npm run minify",
-    "watch": "stylus example/style.styl -o example/ -w & jade example/index.jade -o out/ -w",
+    "watch": "stylus example/style.styl -o example/ -w & jade example/index.jade -o example/ -w",
     "wat": "jade src -P  -w",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
