@@ -1,6 +1,6 @@
 {
   "name": "ng-clustered-map",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "An angular directive to display clustered maps",
   "main": "dist/ng-clustered-map.min.js",
   "scripts": {
