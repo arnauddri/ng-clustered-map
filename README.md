@@ -7,6 +7,8 @@ Add google maps with clustered markers in your Angular apps with a single line o
 See it live here:
 [http://arnauddri.github.io/ng-clustered-map/](http://arnauddri.github.io/ng-clustered-map/)
 
+![alt text](http://www.go-on.co/wp-content/uploads/2014/05/MarkersWithCluster.png "Cluster example")
+
 ### Install
 
 Via npm
