@@ -12,7 +12,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-app='test.app'>
     <div class="wrapper">
       <header>
         <h1>Ng-clustered-map</h1>
@@ -53,6 +53,11 @@
 <p>Declare the directive as an element an pass it your arguments:</p>
 
 <div class="highlight highlight-html"><pre>  &lt;<span class="pl-ent">clustered</span><span class="pl-e">-map</span> <span class="pl-e">markers</span>=<span class="pl-s1"><span class="pl-pds">"</span>markers<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">clustered</span><span class="pl-e">-map</span>&gt;</pre></div>
+
+
+    <div ng-controller="testCtrl">
+      <clustered-map markers="markers"></clustered-map>
+    </div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/arnauddri">arnauddri</a></p>
@@ -60,6 +65,12 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular.js'></script>
+    <script type='text/javascript' src='https://raw.githubusercontent.com/arnauddri/ng-clustered-map/master/dist/ng-clustered-map.min.js'></script>
+    <script>
+      angular.module('test.app', ['clustered.map']).controller('testCtrl', function($scope) {
+        $scope.markers = [[1,2,5],[2,1,4],[1.3,1.6,7],[2,2,8],[1.1,1.2,1],[3,1,9],[2.2,1.3,3],[1.5,.4,20]];
+      })
+    </script>
   </body>
 </html>
