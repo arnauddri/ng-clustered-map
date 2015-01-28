@@ -1,6 +1,7 @@
 # ng-clustered-map [![Build Status](https://travis-ci.org/arnauddri/ng-clustered-map.svg?branch=master)](https://travis-ci.org/arnauddri/ng-clustered-map)
 
 Add google maps with clustered markers in your Angular apps with a single line of code!
+It is a simple and performant directive to load a clustered map in your app.
 
 ### Demo
 
