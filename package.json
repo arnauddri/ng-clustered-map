@@ -1,20 +1,28 @@
 {
   "name": "ng-clustered-map",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An angular directive to display clustered maps",
   "main": "dist/ng-clustered-map.min.js",
   "scripts": {
     "minify": "uglifyjs --lint false -mc -o dist/ng-clustered-map.min.js dist/ng-clustered-map.js",
     "cat": "cat src/directive.prefix src/directive.js src/directive.suffix > dist/ng-clustered-map.js",
     "build": "npm run cat && npm run minify",
-    "watch": "stylus example/style.styl -o example/ -w & jade example/index.jade -o example/ -w",
+    "watch": "stylus example/style.styl -o example/ -w & jade example/index.jade -P -o example/ -w",
     "wat": "jade src -P  -w",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "./node_modules/karma/bin/karma start --single-run --no-auto-watch"
   },
-  "author": "= <=>",
+  "author": "arnauddri",
   "license": "MIT",
   "devDependencies": {
     "jade": "^1.2.0",
-    "stylus": "^0.49.3"
+    "stylus": "^0.49.3",
+    "watchify": "^2.2.1",
+    "jasmine-core": "^2.1.3",
+    "karma-jasmine": "^0.3.4",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma": "^0.12.31",
+    "angular-mocks": "^1.3.11",
+    "angular": "^1.3.11"
   }
 }

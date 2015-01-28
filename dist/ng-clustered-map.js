@@ -16,8 +16,38 @@ angular.module('clustered.map', [])
       MarkerClusterer: $window.MarkerClusterer
     };
   }])
-  .directive('clusteredMap', ['google',
-    function(google) {
+  .factory('utils', function() {
+    return {
+      getCenter: function(markers) {
+        var barycenter = { x: 0, y: 0 }
+        var sum = 0;
+        markers.map(function(marker) {
+          barycenter.x += marker[0] * marker[2]
+          barycenter.y += marker[1] * marker[2]
+          sum += marker[2]
+        })
+
+        barycenter.x /= sum
+        barycenter.y /= sum
+
+        return barycenter
+      },
+      getCalculator: function(markers, numStyles) {
+        var weight = 0;
+
+        for(var i = 0; i < markers.length; i++){
+          weight += markers[i].weight;
+        }
+
+        return {
+          text: weight,
+          index: Math.min(String(weight).length, numStyles)
+        };
+      }
+    };
+  })
+  .directive('clusteredMap', ['google', 'utils',
+    function(google, utils) {
       return {
         restrict: 'EA',
         replace: true,
@@ -31,16 +61,8 @@ angular.module('clustered.map', [])
           function initialize(markers) {
             var barycenter = scope.center || { x: 0, y:0 }
 
-            var sum = 0;
             if (!scope.center) {
-              for (var i = 0;  i < markers.length; i ++) {
-                barycenter.x += markers[i][0] * markers[i][2]
-                barycenter.y += markers[i][1] * markers[i][2]
-                sum += markers[i][2]
-              }
-
-              barycenter.x /= sum
-              barycenter.y /= sum
+              barycenter = utils.getCenter(markers)
             }
 
             var center = new google.maps.LatLng(Math.floor(barycenter.x), Math.floor(barycenter.y));
@@ -59,21 +81,8 @@ angular.module('clustered.map', [])
               });
             }
 
-            var calc = function(markers, numStyles) {
-              var weight = 0;
-
-              for(var i = 0; i < markers.length; i++){
-                weight += markers[i].weight;
-              }
-
-              return {
-                text: weight,
-                index: Math.min(String(weight).length, numStyles)
-              };
-            }
-
             var markerCluster = new google.MarkerClusterer(map);
-            markerCluster.setCalculator(calc);
+            markerCluster.setCalculator(utils.getCalculator);
             markerCluster.addMarkers(markers)
           }
 
