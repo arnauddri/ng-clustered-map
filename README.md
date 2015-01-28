@@ -51,10 +51,10 @@ Pass the an array of markers to add on the map:
 ```
 
 **zoom:**
-Defines the initial zooming on the map
+Defines the initial zooming on the map (default: 2)
 
 **center:**
-Defines the initial center of the map
+Defines the initial center of the map (default: barycenter of the passed coordinates)
 
 ```javascript
   $scope.center = { x: 0, y: 0 }
