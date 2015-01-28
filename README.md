@@ -28,6 +28,11 @@ Include Google maps dependencies:
   <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>
 ```
 
+Inject ```clustered.map``` in your module:
+```javascript
+  angular.module('myModule', ['clustered.map'])
+```
+
 Declare the directive as an element an pass it your arguments:
 
 ```html
