@@ -253,3 +253,11 @@ footer {
     color:#444;
   }
 }
+
+
+#map_canvas {
+  width: 100%;
+  min-width: 450px;
+  height: 300px;
+  margin-bottom: 30px;
+}
