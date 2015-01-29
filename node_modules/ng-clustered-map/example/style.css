@@ -1,0 +1,15 @@
+body {
+  color: #f00;
+}
+html,
+body,
+#map_canvas {
+  margin: 0;
+  color: #008000;
+}
+#map_canvas {
+  min-height: 300px !important;
+  min-width: 300px !important;
+  width: 600px;
+  position: relative !important;
+}
