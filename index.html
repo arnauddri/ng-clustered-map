@@ -69,13 +69,13 @@
     <script src="javascripts/scale.fix.js"></script>
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular.js'></script>
-    <script type='text/javascript' src='https://cdn.rawgit.com/arnauddri/ng-clustered-map/master/dist/ng-clustered-map.min.js'></script>
+    <script type='text/javascript' src='./node_modules/angular/angular.min.js'></script>
+    <script type='text/javascript' src='./node_modules/ng-clustered-map/dist/ng-clustered-map.min.js'></script>
     <script>
       angular.module('test.app', ['clustered.map']).controller('testCtrl', function($scope) {
         var markers = [[10,2,1],[2,10,1],[1.9,80,1],[2,80,1],[1.1,1.2,1],[30,1,1],[30,1.6,1],[30,1.0,1],[32,1.3,1],[33,1.3,1],[34,1.3,1],[31,1.3,1],[1.5,.4,1]];
         markers = markers.map(function(t) {
-          t.push('<img src="https://angularjs.org/img/AngularJS-small.png">')
+          t.push('<img src="https://angularjs.org/img/AngularJS-small.png"></img>')
           return t
         })
         $scope.markers = markers
