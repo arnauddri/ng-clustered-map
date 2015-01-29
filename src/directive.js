@@ -73,7 +73,8 @@ angular.module('clustered.map', [])
                 position: new google.maps.LatLng(marker[0],marker[1]),
                 weight:   marker[2],
                 title:    'weight:' + marker[2],
-                content: (marker.length === 4) ? marker[3] : null
+                content: (marker.length > 3) ? marker[3] : null,
+                icon: (marker.length === 5) ? marker[4] : null
               });
 
               if (marker.content) {
