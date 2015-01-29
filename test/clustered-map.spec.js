@@ -42,13 +42,5 @@ describe('ngPrettyJson', function() {
       expect(center.x).toEqual(2)
       expect(center.y).toEqual(2)
     });
-
-    it('should decore $scope.marker', function() {
-      compile()
-      expect($scope.markers.length).toEqual(3)
-      expect($scope.markers[0].weight).toEqual(1)
-      expect($scope.markers[1].weight).toEqual(1)
-      expect($scope.markers[2].weight).toEqual(1)
-    });
   });
 });

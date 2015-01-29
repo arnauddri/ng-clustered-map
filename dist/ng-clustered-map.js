@@ -73,13 +73,25 @@ angular.module('clustered.map', [])
               mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
-            for (var i = 0; i < markers.length;++i) {
-              markers[i] = new google.maps.Marker({
-                position: new google.maps.LatLng(markers[i][0],markers[i][1]),
-                weight:   markers[i][2],
-                title:    'weight:' + markers[i][2]
+            markers = markers.map(function(marker) {
+              marker = new google.maps.Marker({
+                position: new google.maps.LatLng(marker[0],marker[1]),
+                weight:   marker[2],
+                title:    'weight:' + marker[2],
+                content: (marker.length === 4) ? marker[3] : null
               });
-            }
+
+              if (marker.content) {
+                var infowindow = new google.maps.InfoWindow({
+                  content: marker.content
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                  infowindow.open(map, marker);
+                });
+              }
+
+              return marker
+            })
 
             var markerCluster = new google.MarkerClusterer(map);
             markerCluster.setCalculator(utils.getCalculator);

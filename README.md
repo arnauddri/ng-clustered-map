@@ -50,6 +50,11 @@ Pass the an array of markers to add on the map:
   $scope.markers= [[latitude, longitude, weight], ...]
 ```
 
+To add customs pop-ups to a pin, just add a 4th element to the pin's array with its inner HTML
+```javascript
+  $scope.markers= [[1.0, 1.0, 3, '<h1>foobar</h1>'], ...]
+```
+
 **zoom:**
 Defines the initial zooming on the map (default: 2)
 
